@@ -1,6 +1,6 @@
 # MCP (Model Context Protocol)
 
-Planned AI assistant integration following `instructions.md` Phase 4.
+Planned AI assistant integration following `instructions.md` Phase 4. No MCP code is active yet; `/api/chat` returns a placeholder response.
 
 ## Goals
 - Provide tools to query analytics data (GA4/GSC) and generate insights
@@ -22,8 +22,8 @@ const server = new Server({ name: 'slingshot-mcp', version: '1.0.0' })
 ```
 
 ## Frontend integration
-- Wire `pages/Chat.tsx` to call an API that proxies MCP streaming responses
-- Maintain `chat_sessions`/`chat_messages` in Supabase for history
+- Wire `pages/Chat.tsx` to call backend streaming endpoints once available
+- Maintain `chat_sessions`/`chat_messages` in Supabase for history (schema exists)
 
 ## Next steps
 - Scaffold `packages/mcp-server` with MCP SDK

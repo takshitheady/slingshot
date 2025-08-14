@@ -32,11 +32,11 @@ export function Setup() {
     try {
       // Test GA4 connection
       const ga4Properties = await analyticsService.getGA4Properties()
-      setProperties(ga4Properties.data || [])
+      setProperties(Array.isArray(ga4Properties) ? ga4Properties : [])
 
       // Test GSC connection
       const gscSites = await analyticsService.getSearchConsoleSites()
-      setSites(gscSites.data || [])
+      setSites(Array.isArray(gscSites) ? gscSites : [])
     } catch (error) {
       console.error('Failed to test Google connections:', error)
     } finally {

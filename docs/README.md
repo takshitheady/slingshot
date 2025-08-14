@@ -1,3 +1,17 @@
+# Slingshot Docs
+
+Start here for an overview. Key guides:
+
+- Architecture: `architecture.md`
+- Frontend: `frontend.md`
+- Backend API: `backend-api.md`
+- Database: `database.md`
+- Environment: `env.md`
+- Setup: `setup.md`
+- Supabase Google OAuth: `../SUPABASE_GOOGLE_OAUTH_SETUP.md`
+- Security: `security.md`
+
+If anything is missing or outdated, see inline notes across files.
 # Slingshot Documentation
 
 A comprehensive web analytics platform integrating Google Analytics 4 (GA4) and Google Search Console (GSC), with dashboards and an AI assistant.

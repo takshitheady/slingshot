@@ -23,8 +23,10 @@ Minimum for local dev:
 SERVER_PORT=3000
 CLIENT_URL=http://localhost:5173
 
-SUPABASE_URL=... # from Supabase project settings
+VITE_SUPABASE_URL=... # from Supabase project settings
 SUPABASE_SERVICE_ROLE_KEY=... # service role key (keep secret)
+VITE_SUPABASE_ANON_KEY=... # anon key for web
+VITE_API_URL=http://localhost:3000
 
 GOOGLE_CLIENT_ID=...
 GOOGLE_CLIENT_SECRET=...
@@ -48,7 +50,7 @@ This runs both server and web via Turborepo.
 
 ## 5) Connect Google
 
-In the web app, go to `/setup` and click Connect. Complete Google consent. On success you will be redirected back and tokens will be stored in `localStorage` (development only).
+In the web app, go to `/setup` and click Connect. Complete Google consent using Supabase OAuth. On success, the web calls `POST /auth/google-tokens` to store tokens in `public.user_tokens` (not localStorage).
 
 ## Troubleshooting
 - CORS errors: ensure `CLIENT_URL` matches your web origin

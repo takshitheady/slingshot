@@ -5,7 +5,7 @@ Create a `.env` at the repository root. The backend loads it via `dotenv` with `
 ## Server
 - `SERVER_PORT` (default: `3000`): Express server port
 - `CLIENT_URL`: Frontend origin for CORS and redirects (e.g., `http://localhost:5173`)
-- `SUPABASE_URL`: Supabase project URL
+- `VITE_SUPABASE_URL`: Supabase project URL (also used by server code expecting `process.env.VITE_SUPABASE_URL`)
 - `SUPABASE_SERVICE_ROLE_KEY`: Supabase service role key (server-side only)
 - `GOOGLE_CLIENT_ID`: Google OAuth client ID
 - `GOOGLE_CLIENT_SECRET`: Google OAuth client secret
@@ -16,9 +16,9 @@ Create a `.env` at the repository root. The backend loads it via `dotenv` with `
 - `ANTHROPIC_API_KEY` (planned): for AI assistant
 
 ## Frontend
-If you integrate Supabase client in the web app:
-- `VITE_SUPABASE_URL`: Supabase URL exposed to the client
+- `VITE_SUPABASE_URL`: Supabase URL for client SDK
 - `VITE_SUPABASE_ANON_KEY`: Supabase anon key for client SDK
+- `VITE_API_URL`: Backend API base (default `http://localhost:3000`)
 
 Notes:
 - Never expose `SUPABASE_SERVICE_ROLE_KEY` to the frontend.

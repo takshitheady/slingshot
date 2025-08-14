@@ -5,7 +5,7 @@
 - [x] Basic Express server with security middleware
 - [x] Vite React app with routing and layout
 - [x] Supabase schema migration and typed client package
-- [ ] Auth-protected routes and Supabase auth wiring
+- [x] Auth-protected routes and Supabase auth wiring
 
 ## Phase 2: Google Integration
 - [x] OAuth flow (dev) and Google tokens roundtrip
