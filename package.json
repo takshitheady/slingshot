@@ -1,0 +1,26 @@
+{
+  "name": "slingshot",
+  "version": "1.0.0",
+  "description": "Comprehensive web analytics platform",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:server": "pnpm --filter @slingshot/server dev",
+    "dev:web": "pnpm --filter @slingshot/web dev",
+    "dev:all": "concurrently -n server,web -c green,cyan \"pnpm --filter @slingshot/server dev\" \"pnpm --filter @slingshot/web dev\"",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "type-check": "turbo run type-check"
+  },
+  "devDependencies": {
+    "@21st-extension/toolbar": "^0.5.14",
+    "concurrently": "^8.2.2",
+    "turbo": "^2.5.5",
+    "typescript": "^5.6.3"
+  }
+}

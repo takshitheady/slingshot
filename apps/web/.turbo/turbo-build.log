@@ -1,0 +1,13 @@
+
+> @slingshot/web@1.0.0 build /Users/takshitmathur/Desktop/untitled folder/slingshot/apps/web
+> tsc && vite build
+
+vite v5.4.19 building for production...
+transforming...
+✓ 38 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.48 kB │ gzip:  0.31 kB
+dist/assets/index-BfJsPcjp.css    9.15 kB │ gzip:  2.57 kB
+dist/assets/index-Br07qfwE.js   168.82 kB │ gzip: 54.24 kB
+✓ built in 1.51s

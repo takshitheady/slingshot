@@ -1,0 +1,7 @@
+
+> @slingshot/server@1.0.0 build /Users/takshitmathur/Desktop/untitled folder/slingshot/apps/server
+> tsc
+
+src/routes/auth/google.ts(40,13): error TS2339: Property 'tokens' does not exist on type 'Promise<GetAccessTokenResponse> & void'.
+src/routes/auth/google.ts(41,7): error TS2353: Object literal may only specify known properties, and 'code' does not exist in type 'GetAccessTokenCallback'.
+ ELIFECYCLE  Command failed with exit code 2.
