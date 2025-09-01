@@ -6,6 +6,22 @@
 - Supabase project (cloud or local)
 - Google Cloud project with OAuth 2.0 and APIs enabled
 
+## ⚠️ Required Migration
+Run this migration in Supabase before starting:
+```sql
+-- See: supabase/migrations/20250814000003_create_user_tokens_table.sql
+CREATE TABLE user_tokens (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE NOT NULL,
+  provider TEXT NOT NULL,
+  access_token TEXT NOT NULL,
+  refresh_token TEXT,
+  expires_at TIMESTAMP WITH TIME ZONE,
+  UNIQUE(user_id, provider)
+);
+-- Plus RLS policies and indexes
+```
+
 ## 1) Clone & install
 
 ```bash
