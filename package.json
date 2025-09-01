@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "Comprehensive web analytics platform",
   "private": true,
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "pnpm@10.0.0",
   "engines": {
     "node": ">=18"
   },
   "scripts": {
     "build": "turbo run build",
+    "build:web": "turbo run build --filter=@slingshot/web",
+    "build:server": "turbo run build --filter=@slingshot/server", 
+    "vercel-build": "pnpm build:web",
     "dev": "turbo run dev",
     "dev:server": "pnpm --filter @slingshot/server dev",
     "dev:web": "pnpm --filter @slingshot/web dev",

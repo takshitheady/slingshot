@@ -9,6 +9,7 @@ export function Dashboard() {
   const [gscSeries, setGscSeries] = useState<Array<{ date: string; clicks: number; impressions: number }>>([])
   const [properties, setProperties] = useState<any[]>([])
   const [sites, setSites] = useState<any[]>([])
+  console.log(sites) // Temporary log to satisfy TypeScript
   const [selectedProperty, setSelectedProperty] = useState<string | null>(null)
   const [selectedSite, setSelectedSite] = useState<string | null>(null)
   const [dateRange, setDateRange] = useState({

@@ -4,10 +4,18 @@
 
 vite v5.4.19 building for production...
 transforming...
-✓ 38 modules transformed.
+✓ 2468 modules transformed.
+[plugin:vite:reporter] [plugin vite:reporter] 
+(!) /Users/takshitmathur/Desktop/untitled folder/slingshot/apps/web/src/lib/supabaseClient.ts is dynamically imported by /Users/takshitmathur/Desktop/untitled folder/slingshot/apps/web/src/services/analytics.ts but also statically imported by /Users/takshitmathur/Desktop/untitled folder/slingshot/apps/web/src/components/AuthProvider.tsx, /Users/takshitmathur/Desktop/untitled folder/slingshot/apps/web/src/pages/AuthCallback.tsx, /Users/takshitmathur/Desktop/untitled folder/slingshot/apps/web/src/pages/VerifyEmail.tsx, dynamic import will not move module into another chunk.
+
 rendering chunks...
 computing gzip size...
-dist/index.html                   0.48 kB │ gzip:  0.31 kB
-dist/assets/index-BfJsPcjp.css    9.15 kB │ gzip:  2.57 kB
-dist/assets/index-Br07qfwE.js   168.82 kB │ gzip: 54.24 kB
-✓ built in 1.51s
+dist/index.html                   0.48 kB │ gzip:   0.31 kB
+dist/assets/index-Ino5JHjO.css   21.78 kB │ gzip:   4.88 kB
+dist/assets/index-D0G11RDg.js   721.02 kB │ gzip: 204.62 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 3.45s
