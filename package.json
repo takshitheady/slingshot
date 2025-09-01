@@ -20,6 +20,9 @@
     "test": "turbo run test",
     "type-check": "turbo run type-check"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "msgpackr-extract"]
+  },
   "devDependencies": {
     "@21st-extension/toolbar": "^0.5.14",
     "concurrently": "^8.2.2",

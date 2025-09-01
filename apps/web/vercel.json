@@ -1,16 +1,11 @@
 {
   "version": 2,
-  "buildCommand": "pnpm build --filter=@slingshot/web",
-  "outputDirectory": "apps/web/dist",
-  "installCommand": "pnpm install --frozen-lockfile",
+  "installCommand": "cd ../.. && pnpm install --frozen-lockfile",
+  "buildCommand": "cd ../.. && pnpm build:web",
+  "outputDirectory": "dist",
   "framework": "vite",
   "env": {
     "PNPM_VERSION": "10.0.0"
-  },
-  "functions": {
-    "apps/web/dist/**": {
-      "runtime": "nodejs18.x"
-    }
   },
   "rewrites": [
     {
