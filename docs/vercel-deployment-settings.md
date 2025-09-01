@@ -4,9 +4,9 @@
 
 ### Build & Development Settings
 - **Framework Preset**: Other (do not use auto-detect)
-- **Build Command**: Leave empty (configured in app-level vercel.json)
-- **Install Command**: Leave empty (configured in app-level vercel.json)
-- **Output Directory**: Leave empty (configured in app-level vercel.json)
+- **Install Command**: `pnpm install --frozen-lockfile`
+- **Build Command**: `pnpm -w build:web` (the `-w` runs from workspace root)
+- **Output Directory**: `apps/web/dist`
 - **Root Directory**: **IMPORTANT: Leave this empty** (do not set any root directory)
 
 ### Environment
@@ -18,12 +18,14 @@
 - **Production Branch**: main
 - **Install Command at Project Level**: Should auto-detect pnpm workspace
 
-## App-Level Configuration
+## ✅ Working Configuration (Updated)
 
-The build configuration is now in `/apps/web/vercel.json`:
-- Uses `cd ../.. &&` pattern to run commands from monorepo root
-- Properly configures pnpm workspace context
-- Sets correct output directory relative to app
+**IMPORTANT**: Use Vercel Dashboard settings instead of vercel.json files for monorepo deployments.
+
+The working configuration uses pnpm workspace commands that automatically handle monorepo context:
+- `pnpm install --frozen-lockfile` - installs dependencies from workspace root
+- `pnpm -w build:web` - builds web app using workspace root context
+- No need for `cd` commands or path navigation
 
 ## Build Dependencies
 
@@ -48,6 +50,16 @@ If deployment still fails:
 
 ## Migration Notes
 
-- Removed root-level `vercel.json` (Vercel ignores it for pnpm monorepos)
-- Moved configuration to app-level for proper monorepo context
+- **Final Solution**: Configure commands directly in Vercel Dashboard (not vercel.json files)
+- Use pnpm workspace commands (`pnpm -w`) instead of directory navigation
+- Root and app-level vercel.json files are not needed for this setup
 - Updated package manager version to match lockfile version
+
+## Deployment Success
+
+✅ Working deployment achieved with:
+- Install Command: `pnpm install --frozen-lockfile`
+- Build Command: `pnpm -w build:web`
+- Output Directory: `apps/web/dist`
+- Node.js Version: 22.x
+- Root Directory: (empty)
